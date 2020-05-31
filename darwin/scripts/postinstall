@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Custermize this for your application
+#Custormize this for your application
 APPLICATION_FILE_PATH=bin/wso2server.sh
 
 #Parameters
