@@ -58,3 +58,5 @@ sudo installer -allowUntrusted -pkg $DRIVER -target /
 
 echo "\nEnabling CH34x driver to avoid reboot"
 sudo kextload /Library/Extensions/usbserial.kext
+
+exit 0
