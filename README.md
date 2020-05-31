@@ -6,6 +6,9 @@ Installs the following:
 - CH34x 1.5 Driver
 - Ardublock
 
+To generate .pkg, you need to run:
+bash <PRODUCT_HOME>/macOS-x64/build-macos-x64.sh [APPLICATION_NAME] [APPLICATION_VERSION]
+
 <p align="center"> 
 <img src="https://stock-commodity-forecasting.com/wp-content/uploads/2019/12/APPLE.jpg" height=300 width=300>
 </p>
