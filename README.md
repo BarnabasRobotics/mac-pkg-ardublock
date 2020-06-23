@@ -7,7 +7,9 @@ Installs the following:
 - Ardublock
 
 To generate .pkg, you need to run:
-bash <PRODUCT_HOME>/macOS-x64/build-macos-x64.sh [APPLICATION_NAME] [APPLICATION_VERSION]
+bash build-macos-x64.sh Barnabas-Robotics 1.0.5
+
+Be sure to change the version # on subsequent builds
 
 <p align="center"> 
 <img src="https://stock-commodity-forecasting.com/wp-content/uploads/2019/12/APPLE.jpg" height=300 width=300>

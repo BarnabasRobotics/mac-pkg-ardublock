@@ -26,6 +26,13 @@ USERS=$(dscl . list /Users | grep -vE '^_|daemon|nobody|root')
 if test -f "./$FILE" ; then
     for u in $USERS; do
         echo "\nCopying $FILE to /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool..."
+        
+        #remove the previous ardublock folder if it exists
+        if [ -d "/Users/$u/Documents/Arduino/tools/ArduBlockTool/tool" ]
+        then
+            rm -r /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool
+        fi
+        
         sudo mkdir -p /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool
         sudo cp ./$FILE  /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool/
     done
