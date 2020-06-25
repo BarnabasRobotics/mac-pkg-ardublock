@@ -30,11 +30,11 @@ if test -f "./$FILE" ; then
         #remove the previous ardublock folder if it exists
         if [ -d "/Users/$u/Documents/Arduino/tools/ArduBlockTool/tool" ]
         then
-            rm -r /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool
+            rm -r "/Users/$u/Documents/Arduino/tools/ArduBlockTool/tool"
         fi
         
-        sudo mkdir -p /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool
-        sudo cp ./$FILE  /Users/$u/Documents/Arduino/tools/ArduBlockTool/tool/
+        sudo mkdir -p "/Users/$u/Documents/Arduino/tools/ArduBlockTool/tool"
+        sudo cp ./$FILE  "/Users/$u/Documents/Arduino/tools/ArduBlockTool/tool/"
     done
 else
     echo "$FILE does not exist"
@@ -46,8 +46,8 @@ USERS=$(dscl . list /Users | grep -vE '^_|daemon|nobody|root')
 if test -d "./$LIB" ; then
     for u in $USERS; do
         echo "Installing $LIB Library to /Users/$u/Documents/Arduino/libraries"
-        sudo mkdir -p /Users/$u/Documents/Arduino/libraries
-        sudo cp -r ./$LIB  /Users/$u/Documents/Arduino/libraries/
+        sudo mkdir -p "/Users/$u/Documents/Arduino/libraries"
+        sudo cp -r ./$LIB  "/Users/$u/Documents/Arduino/libraries/"
     done
 else
     echo "$LIB does not exist"
